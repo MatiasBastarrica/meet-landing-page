@@ -1,4 +1,5 @@
-/* colors  */
+/* ### CSS VARIABLES ### */
+
 :root {
   /* primary */
   --dark-cyan: hsla(192, 37%, 48%, 1);
@@ -14,4 +15,6 @@
   /* buttom hover */
   --cyan-hover: hsla(192, 54%, 64%, 1);
   --violet-hover: hsla(268, 55%, 71%, 1);
+
+  --ff-red-hat-display: "Red Hat Display", sans-serif;
 }
