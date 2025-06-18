@@ -1,93 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Frontendmentor | Meet landing page</title>
 
-  <title>Meet Landing Page | correlucas</title>
+    <link rel="icon" href="./assets/favicon-32x32.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-  <link rel="icon" href="./images/favicon-32x32.png" type="image/x-icon">
-
-  <link rel="stylesheet" href="./style.css">
-</head>
-
-<body>
-  <div>
-    <header aria-label="header logo">
-      <a href="index.html">
-        <div class="meet-logo">
-          <img class="meet" src="./assets/meet.svg" alt="meet logo">
-          <img class="icon" src="./assets/meet-icon.svg" alt="meet logo icon">
-        </div>
-      </a>
-
+  <body>
+    <header>
+      <a href="index.html"
+        ><img
+          src="./assets/logo.svg"
+          alt="The company's logo features two colorful dots and the word 'meet'."
+      /></a>
     </header>
-    <!-- hero section wrapper -->
-    <main class="hero-wrapper flex-hero" aria-label="banner">
-      <div class="hero-img hero-img-left"></div>
-      <div class="hero-img-mobile">
-        <img src="./assets/tablet/image-hero.png" alt="">
-      </div>
-      <div class="hero">
-        <h1 class="h1 pb-42">Group Chat<br> for <span class="gradient-text">Everyone</span> </h1>
-        <p class="body-text pb-42">Meet makes it easy to connect with others strong face-to-face virtually and collaborate across any device.</p>
-        <div class="btn">
-          <button class="btn-1">Download <span>v1.3</span></button>
-          <button class="btn-2">What is it?</button>
+    <main>
+      <section>
+        <picture>
+          <img
+            src="./assets/tablet/image-hero.png"
+            alt="A collage of different profile pictures."
+          />
+        </picture>
+        <h1>Group Chat for <span class="text-gradient">Everyone</span></h1>
+        <p class="subtitle">
+          Meet makes it easy to connect with others strong face-to-face
+          virtually and collaborate across any device.
+        </p>
+        <div class="buttons-container">
+          <button type="button">
+            Download <span class="text-cyan">v1.3</span>
+          </button>
+          <button type="button">What is it?</button>
         </div>
-      </div>
-
-      <div class="hero-img hero-img-right"></div>
+      </section>
+      <section class="divider">
+        <div class="divider__bar"></div>
+        <div class="divider__number">01</div>
+      </section>
+      <section class="gallery">
+        <img
+          src="./assets/desktop/image-woman-in-videocall.jpg"
+          alt="Woman in a videocall."
+        />
+        <img
+          src="./assets/desktop/image-women-videochatting.jpg"
+          alt="Women videochatting."
+        />
+        <img src="./assets/desktop/image-man-texting.jpg" alt="Man texting." />
+        <img
+          src="./assets/desktop/image-men-in-meeting.jpg"
+          alt="Men in a meeting."
+        />
+      </section>
+      <section>
+        <p class="tag text-cyan">Built for modern use</p>
+        <h2>Smarter meetings, all in one place</h2>
+        <p>
+          Send messages, share files, show your screen, and record your meetings
+          — all in one workspace. Control who can join with invite-only team
+          access, data encryption, and data export.
+        </p>
+      </section>
+      <section class="divider">
+        <div class="divider__bar"></div>
+        <div class="divider__number">02</div>
+      </section>
     </main>
-
-    <section class="divider" aria-label="second divider">
-      <span class="number-bar flex"></span>
-      <span class="number-one flex">01</span>
-    </section>
-
-    <!-- photo gallery section -->
-    <section class="photo-gallery-wrapper" aria-label="photo gallery">
-      <div class="gallery-grid">
-        <div class="gallery-container">
-          <img src="./assets/desktop/image-woman-in-videocall.jpg" alt="woman during video call">
-        </div>
-        <div class="gallery-container">
-          <img src="./assets/desktop/image-women-videochatting.jpg" alt="weman videochatting">
-        </div>
-
-
-        <div class="gallery-container">
-          <img src="./assets/desktop/image-man-texting.jpg" alt="man on a video call">
-        </div>
-        <div class="gallery-container">
-          <img class="d" src="./assets/desktop/image-men-in-meeting.jpg" alt="men on a video call">
-        </div>
-      </div>
-    </section>
-
-    <!-- explainer section wrapper -->
-    <section class="explainer-section-wrapper flex" aria-label="product explainer">
-      <span class="overline">Built for modern use</span>
-      <h2 class="h2">Smarter meetings,<br>all in one place</h2>
-      <p class="body-text">Send messages, share files, show your screen, and record your meetings — all in one workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
-    </section>
-  </div>
-
-  <section class="divider-2" aria-label="divider">
-    <span class="number-bar flex"></span>
-    <span class="number-two flex">02</span>
-  </section>
-
-  <!-- footer section -->
-  <div class="footer-wrapper flex">
-    <footer class="flex">
-      <h3 class="h2">Experience more together</h3>
-      <p class="body-text">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
-      <button class="btn-3">Download <span>v1.3</span></button>
+    <footer class="text-white">
+      <h2>Experience more together</h2>
+      <p>
+        Stay connected with reliable HD meetings and unlimited one-on-one and
+        group video sessions.
+      </p>
+      <button type="button">Download <span>v1.3</span></button>
     </footer>
-  </div>
-</body>
-
+  </body>
 </html>
