@@ -115,8 +115,7 @@ header {
 
 /* ### HERO SECTION ### */
 
-.hero picture img,
-.hero picture {
+.mobile-img {
   margin-inline: auto;
 }
 
@@ -140,6 +139,11 @@ header {
 
 .hero button {
   align-self: center;
+}
+
+.left-img,
+.right-img {
+  display: none;
 }
 
 /* ### DIVIDER ### */
@@ -182,6 +186,7 @@ header {
 
 .gallery img {
   border-radius: 0.6rem;
+  width: 100%;
 }
 
 /* ### FEATURES SECTION ### */
@@ -233,8 +238,35 @@ footer h2 {
   color: var(--white);
 }
 
-/* PLAYGROUND */
+/* ### MEDIA QUERIES ### */
 
-/* .wrapper {
-  position: relative;
-} */
+@media (min-width: 40rem) {
+  footer::before {
+    background-image: url(./assets/tablet/image-footer.jpg);
+  }
+}
+
+@media (min-width: 75rem) {
+  .mobile-img {
+    display: none;
+  }
+
+  .left-img,
+  .right-img {
+    display: block;
+    align-self: center;
+  }
+
+  .hero {
+    display: flex;
+    justify-content: center;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  footer::before {
+    background-image: url(./assets/desktop/image-footer.jpg);
+  }
+}
