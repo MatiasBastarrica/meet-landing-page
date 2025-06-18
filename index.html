@@ -21,7 +21,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="region">
       <a href="index.html"
         ><img
           src="./assets/logo.svg"
@@ -29,7 +29,7 @@
       /></a>
     </header>
     <main>
-      <section>
+      <section class="stack text-center region hero">
         <picture>
           <img
             src="./assets/tablet/image-hero.png"
@@ -42,17 +42,17 @@
           virtually and collaborate across any device.
         </p>
         <div class="buttons-container">
-          <button type="button">
-            Download <span class="text-cyan">v1.3</span>
+          <button type="button" class="btn btn-cyan">
+            Download <span class="text-light-cyan">v1.3</span>
           </button>
-          <button type="button">What is it?</button>
+          <button type="button" class="btn btn-purple">What is it?</button>
         </div>
       </section>
       <section class="divider">
         <div class="divider__bar"></div>
         <div class="divider__number">01</div>
       </section>
-      <section class="gallery">
+      <section class="gallery region">
         <img
           src="./assets/desktop/image-woman-in-videocall.jpg"
           alt="Woman in a videocall."
@@ -67,7 +67,7 @@
           alt="Men in a meeting."
         />
       </section>
-      <section>
+      <section class="stack text-center region features">
         <p class="tag text-cyan">Built for modern use</p>
         <h2>Smarter meetings, all in one place</h2>
         <p>
@@ -81,13 +81,18 @@
         <div class="divider__number">02</div>
       </section>
     </main>
-    <footer class="text-white">
-      <h2>Experience more together</h2>
-      <p>
-        Stay connected with reliable HD meetings and unlimited one-on-one and
-        group video sessions.
-      </p>
-      <button type="button">Download <span>v1.3</span></button>
+
+    <footer class="text-white text-center region">
+      <div class="footer-wrapper stack">
+        <h2>Experience more together</h2>
+        <p>
+          Stay connected with reliable HD meetings and unlimited one-on-one and
+          group video sessions.
+        </p>
+        <button type="button" class="btn btn-purple">
+          Download <span class="text-light-purple">v1.3</span>
+        </button>
+      </div>
     </footer>
   </body>
 </html>
