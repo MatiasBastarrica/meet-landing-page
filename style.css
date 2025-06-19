@@ -40,7 +40,7 @@ img {
 }
 
 .region {
-  padding-block: 3rem;
+  padding-block: var(--space, 3rem);
 }
 
 .text-center {
@@ -69,6 +69,10 @@ img {
   color: var(--white);
 }
 
+.btn-cyan:hover {
+  background-color: var(--cyan-hover);
+}
+
 .text-light-cyan {
   color: var(--light-cyan);
 }
@@ -76,6 +80,10 @@ img {
 .btn-purple {
   background-color: var(--dark-violet);
   color: var(--white);
+}
+
+.btn-purple:hover {
+  background-color: var(--violet-hover);
 }
 
 .text-light-purple {
@@ -90,11 +98,22 @@ img {
   color: var(--white);
 }
 
+.text-width {
+  max-width: var(--text-width, 42ch);
+}
+
+.container {
+  width: 80%;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
 /* ###  GENERAL STYLING ### */
 
 body {
   font-family: var(--ff-red-hat-display);
   color: var(--gray);
+  font-size: clamp(1rem, 1vw + 1rem, 1.2rem);
 }
 
 h1,
@@ -113,16 +132,24 @@ header {
   justify-content: center;
 }
 
+header a {
+  transition: ease-out 1s;
+}
+
 /* ### HERO SECTION ### */
 
 .mobile-img {
   margin-inline: auto;
 }
 
+.mobile-img:hover {
+  content: url(./assets/tablet/image-hero-hover.png);
+}
+
 .hero h1 {
   max-width: 10ch;
   margin-inline: auto;
-  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 2vw + 2rem, 5rem);
   font-weight: 900;
 }
 
@@ -144,6 +171,15 @@ header {
 .left-img,
 .right-img {
   display: none;
+  transition: ease 0.5s;
+}
+
+.left-img:hover {
+  content: url(./assets/desktop/image-hero-left-hover.png);
+}
+
+.right-img:hover {
+  content: url(./assets/desktop/image-hero-right-hover.png);
 }
 
 /* ### DIVIDER ### */
@@ -199,7 +235,7 @@ header {
 
 .features h2 {
   font-weight: 900;
-  font-size: 1.9rem;
+  font-size: clamp(1.9rem, 1.6vw + 1.3rem, 3rem);
   max-width: 14ch;
   margin-inline: auto;
 }
@@ -212,6 +248,7 @@ header {
 /* ### FOOTER ### */
 
 footer {
+  --space: 6em;
   margin-top: -28px;
   position: relative;
   background-color: var(--dark-cyan);
@@ -236,6 +273,14 @@ footer::before {
 
 footer h2 {
   color: var(--white);
+  font-weight: 900;
+  max-width: 15ch;
+  margin-inline: auto;
+}
+
+footer p {
+  --text-width: 30ch;
+  margin-inline: auto;
 }
 
 /* ### MEDIA QUERIES ### */
@@ -268,5 +313,45 @@ footer h2 {
 
   footer::before {
     background-image: url(./assets/desktop/image-footer.jpg);
+  }
+
+  footer {
+    padding-inline: 2rem;
+  }
+
+  .footer-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .footer-wrapper > * {
+    margin-top: unset;
+  }
+}
+
+/* ### ANIMATION ### */
+
+.left-img,
+.right-img,
+header a {
+  -webkit-animation: slideIn 1s ease-in;
+  animation: slideIn 1s ease-out;
+}
+
+/* intro animation */
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateX(0px);
+    opacity: 1;
   }
 }
